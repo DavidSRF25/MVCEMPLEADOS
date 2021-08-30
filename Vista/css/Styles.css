@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #354f52;
+  background-repeat: repeat;
+}
+
+.form-register {
+  width: 60%;
+  background: #52796f;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  font-family: "calibri";
+  color: white;
+  border-radius: 10px;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.controls {
+  width: 90%;
+  background: #2f3e46;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #52796f;
+  font-size: 14px;
+  color: white;
+}
+.controlsactuua {
+  width: 20%;
+  background: #2f3e46;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #52796f;
+  font-size: 14px;
+  color: white;
+}
+
+.form-register .botons {
+  width: 60%;
+  background: #2f3e46;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 10px 10px 10px 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.botons-buscar {
+  width: 20%;
+  background: #2f3e46;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 10px 10px 10px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-register .eliminar:hover {
+  width:50px;
+  background: red;
+}
+
+.borrarboton :hover{
+  background: red;
+
+}
+
+
+nav{
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 75px;
+ background: #2f3e46;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .navbar{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 100%;
+ max-width: 90%;
+ background: #2f3e46;
+ margin: auto;
+}
+nav .navbar .logo a{
+  color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav .navbar .menu{
+  display: flex;
+}
+.navbar .menu li{
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar .menu li a{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar .menu li h3{
+
+color: #fff;
+
+
+}
+.navbar .menu li a:hover{
+
+  background: #52796f;
+
+}
+
+
+
+.button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #2980b9;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+ 
+
+
+
+
+ img {
+  display: relative;
+  height: 50px;
+  width: 50px;
+  
+  border-radius: 17px;
+  
+  
+
+ 
+  
+ 
+  
+}
+
+
+label {
+  font-size: 18px;
+}
+
+table,
+th,
+td {
+  width: auto;
+  margin: 20px;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 5px;
+  background: #cad2c5;
+  color: #000;
+}
+
+th {
+  background: #2f3e46;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  padding: 50px;
+  margin: 15px;
+  font-family: "Anton", sans-serif;
+  color: white;
+  font-size: 45px;
+}
+.rol{
+  text-align: left;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.dere {
+  display: block;
+}
+
+.iz {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.control {
+  width: 50%;
+  background: #2f3e46;
+  padding: 10px;
+  margin-left: 280px;
+
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #52796f;
+  font-size: 14px;
+  color: white;
+}
+.modify {
+  
+  text-align: center;
+}
