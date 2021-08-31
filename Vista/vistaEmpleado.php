@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Vista/css/Styles.css">
+    
     <title>Empleado</title>
+   <script text="text/javascript"  src="Vista/js/jquery-3.3.1.min.js"></script>
+   <script text="text/javascript" src="Vista/js/Empleados.js"></script>
 
 
 </head>
@@ -128,7 +131,7 @@
             </div>
             <div class="dere">
                 <input class="botons" type="submit" name="insertar" value="INSERTAR "><br>
-                <input class="botons" type="submit" name="consultar" value="CONSULTAR "><br>
+                <input class="botons" id="consultar" type="button" name="consultar" value="CONSULTAR "><br>
                 <input class="botons" type="submit" name="buscar" value="BUSCAR"><br>
 
             </div>
@@ -155,7 +158,7 @@
         ?>
 
         <?php
-        if ($datos) {
+        if((  isset($_POST['busca']) || isset($_POST['buscaf'])) && $datos) {
 
 
         ?>
@@ -220,6 +223,29 @@
                 </tbody>
             </table>
             <hr>
+
+
+
+          <table id="tabla">
+          <tr id="tr">
+                    <th>Codigo</th>
+                    <th>Apellido</th>
+                    <th>Oficio</th>
+                    <th>Direccion</th>
+                    <th>Ingreso</th>
+                    <th>Salario</th>
+                    <th>Comision</th>
+                    <th>Departamento</th>
+                    <th>Actualizar</th>
+                    <th>Borrar</th>
+                </tr>
+              
+
+          </table>
+
+
+
+
             <?php
             if (isset($_POST['Actualizar'])) {
 

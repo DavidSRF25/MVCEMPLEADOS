@@ -15,11 +15,12 @@ $empleado = new ModeloEmpleados();
 $departamentitos = new ModeloDpto();
 $dp = $departamentitos->cargaSelect();
 
-$datos = $empleado->ConsultaTodos();
+
 if (isset($_POST['consultar'])) {
 
- 
+  $datos = $empleado->ConsultaTodos();
 }
+
 if (isset($_POST['busca'])) {
 
   $cri = $_POST['criterio'];
