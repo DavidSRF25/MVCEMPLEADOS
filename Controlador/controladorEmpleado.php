@@ -1,7 +1,11 @@
+
 <?php
 
 require_once('Modelo/modeloEmpleado.php');
 require_once('Modelo/modeloDepartamento.php');
+require_once('fpdf/reporteEmpleados.php');
+
+
 session_start();
 $usu = $_SESSION['usuario'] ;
 $ap = $_SESSION['apellido']; 
@@ -16,6 +20,7 @@ $departamentitos = new ModeloDpto();
 $dp = $departamentitos->cargaSelect();
 
 
+
 if (isset($_POST['consultar'])) {
 
   $datos = $empleado->ConsultaTodos();
@@ -27,6 +32,42 @@ if (isset($_POST['busca'])) {
 
   $datos = $empleado->Uno($cri);
 }
+
+if (isset($_POST['pdf'])) {
+$pdf = new PDF();
+
+
+  $datos = $empleado->ConsultaTodosPDF();
+  $pdf->AliasNbPages();
+  $pdf->AddPage('P','Letter');
+  $pdf->SetFont('Times','',12);
+
+  foreach($datos as $f ){
+    
+        $pdf->Ln();
+        $pdf->Cell(20,10,$f[0],1,0,'C',0);
+        $pdf->Cell(27,10,utf8_decode($f[1]),1,0,'C',0);
+        $pdf->Cell(30,10,$f[2],1,0,'C',0);
+        $pdf->Cell(20,10,$f[3],1,0,'C',0);
+        $pdf->Cell(30,10,$f[4],1,0,'C',0);
+        $pdf->Cell(20,10,$f[5],1,0,'C',0);
+        $pdf->Cell(20,10,$f[6],1,0,'C',0);
+        $pdf->Cell(35,10,$f[7],1,0,'C',0);
+
+
+
+  }
+
+  
+  $hoy = date('dmy');
+        $nombre = $hoy . "_Listado_Empleados.pdf" ;
+  $pdf->Output('D',$nombre);// GEnera el PDF
+
+
+
+}
+
+
 if (isset($_POST['buscaf'])) {
 
   $cri = $_POST['criterio'];

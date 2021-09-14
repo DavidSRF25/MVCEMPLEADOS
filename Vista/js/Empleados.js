@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function(){
 
  var tr=document.getElementById("tr");
@@ -41,9 +44,13 @@ $(document).ready(function(){
                 <td>${x.nombre}</td>
                 <td><input type="submit" value="Actualizar" name="Actualizar"></td>
                 <td><input type="submit" onclick="return ConfirmDelete()" class="eliminar" value="Borrar" name="borrar"></td>
+              
+                
                 
 
                 </tr>
+
+                
             
             
             

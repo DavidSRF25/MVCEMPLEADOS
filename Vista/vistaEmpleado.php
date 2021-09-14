@@ -133,6 +133,7 @@
                 <input class="botons" type="submit" name="insertar" value="INSERTAR "><br>
                 <input class="botons" id="consultar" type="button" name="consultar" value="CONSULTAR "><br>
                 <input class="botons" type="submit" name="buscar" value="BUSCAR"><br>
+                <input class="botons" type="submit" name="pdf" value="GENERAR PDF"><br>
 
             </div>
         </div> <br><br><br>
@@ -239,8 +240,10 @@
                     <th>Actualizar</th>
                     <th>Borrar</th>
                 </tr>
-              
-
+                
+            
+           
+                
           </table>
 
 

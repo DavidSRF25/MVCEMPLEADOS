@@ -28,6 +28,32 @@ try{
 echo json_encode($datos,JSON_UNESCAPED_UNICODE);
 
 }
+
+public function ConsultaTodosPDF(){
+
+  try{
+  
+    $sql="select  e.Codigo_Empleado , e.Apellido,e.Oficio ,e.Direccion,e.Fecha_Ingreso,e.Salario,e.Comision , d.nombre from empleado as e  inner join departamento as d on (e.departamento=d.CODIGO_DEPART);" ; 
+    $conecta=Conexion::conexionbd()->prepare($sql);
+    $conecta->execute();//ejecuta la consulta
+   
+      
+      while($fila=$conecta->fetch()){ // Recorre fila por fila 
+  
+        $empleados[]=$fila; // Se guarda en un arreglo 
+  
+      }
+     // $sql="select  e.Codigo_Empleado , e.Apellido,e.Oficio ,e.Direccion,e.Fecha_Ingreso,e.Salario,e.Comision , d.nombre from empleado as e  inner join departamento as d on (e.departamento=d.CODIGO_DEPART);" ;
+  
+  
+  }catch(Exception $e){
+  
+     echo "Error en la consulta ".$e;
+  
+  }
+     return $empleados;
+  
+  }
 public function ConsultaTodosEmple($criterio){
   $empleados=null;
 
