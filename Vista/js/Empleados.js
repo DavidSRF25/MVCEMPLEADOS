@@ -23,7 +23,7 @@ $(document).ready(function(){
            console.log(datos);
            tr.style.display="contents";
 
-           var contenido=document.getElementById("tabla");
+           let contenido=document.getElementById("tabla");
                        
 
            for(let x of datos){
@@ -40,15 +40,10 @@ $(document).ready(function(){
                 <td>${x.Comision}</td>
                 <td>${x.nombre}</td>
                 <td><input type="submit" value="Actualizar" name="Actualizar"></td>
-                <td><input type="submit" onclick="return ConfirmDelete()" class=" eliminar" value="Borrar" name="borrar"></td>
+                <td><input type="submit" onclick="return ConfirmDelete()" class="eliminar" value="Borrar" name="borrar"></td>
                 
 
                 </tr>
-            
-            
-            
-            
-            
             
             
             
@@ -60,16 +55,11 @@ $(document).ready(function(){
 
            
 
-         
-          
-
 
 
 
         })
         
-
-
 
 
 

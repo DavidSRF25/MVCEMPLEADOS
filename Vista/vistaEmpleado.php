@@ -197,13 +197,13 @@
                             <td>
                                 <form action="" method="post">
                                     <input type="hidden" value="<?php echo $d[0]; ?>" name="criterio">
-                                    <input type="submit" value="Actualizar" name="Actualizar">
+                                    <!---<input type="submit" value="Actualizar" name="Actualizar">-->
                                 </form>
                             </td>
                             <td>
                                 <form action="" method="post">
                                     <input type="hidden" value="<?php echo $d[0]; ?>" name="criterio">
-                                    <input type="submit" onclick="return ConfirmDelete()" class=" eliminar" value="Borrar" name="borrar">
+                                    <input type="button" onclick="return ConfirmDelete()" class=" eliminar" value="Borrar" name="borrar">
                                 </form>
                             </td>
 
